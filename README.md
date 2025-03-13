@@ -79,7 +79,7 @@ The percent daily value (**PDV**) indicates how much a nutrient in a serving con
 
 We introduced an additional categorical feature, `calorie_range`, believing that calorie content could significantly influence user ratings. We classified recipes into four categories based on calorie content:
 
-| Calorie Range | Calories |
+| Calorie Range | Calories                |
 |---------------|-------------------------|
 | Low           | [0–25th percentile)     |
 | Medium        | [25th-50th percentile)  |
@@ -100,7 +100,8 @@ We introduced an additional categorical feature, `calorie_range`, believing that
 
 We created 3 plots for univariate analysis
 
-Our first plot is a box plot of the 
+Our first plot is a bar plot of the counts of the recipes of each rating in the Dataset. 
+
 
 **Interesting Aggregate**  
 
