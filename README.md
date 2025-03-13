@@ -56,49 +56,47 @@ The second dataset, interactions, contains 731927 rows where each row is a revie
 **Base Model Classification Report**
 Weighted F1-score: 0.680
 
-Classification Report:
-              precision    recall  f1-score   support
+|             | Precision | Recall | F1-Score | Support |
+|-------------|-----------|--------|----------|---------|
+| **1.0**    | 0.09      | 0.06   | 0.07     | 576     |
+| **2.0**    | 0.03      | 0.02   | 0.02     | 501     |
+| **3.0**    | 0.06      | 0.04   | 0.05     | 1467    |
+| **4.0**    | 0.26      | 0.19   | 0.22     | 7436    |
+| **5.0**    | 0.80      | 0.86   | 0.83     | 33899   |
+| **Accuracy** |         |        | 0.70     | 43879   |
+| **Macro Avg** | 0.25   | 0.24   | 0.24     | 43879   |
+| **Weighted Avg** | 0.66| 0.70   | 0.68     | 43879   |
 
-         1.0       0.08      0.06      0.07       595
-         2.0       0.04      0.03      0.03       465
-         3.0       0.07      0.05      0.06      1420
-         4.0       0.27      0.20      0.23      7515
-         5.0       0.80      0.86      0.83     33884
-
-    accuracy                           0.70     43879
-   macro avg       0.25      0.24      0.24     43879
-weighted avg       0.67      0.70      0.68     43879
-
-Feature calories (#): 0.7573
-Feature minutes: 0.2427
+| Feature | Weight |
+|--------------|---------|
+| Calories (#) | 0.7573  |
+| Minutes | 0.2427 |
 
 **Final Model Classification Report**
-Best Weighted F1-score (CV): 0.681
 Test Weighted F1-score: 0.686
 
-Classification Report:
-              precision    recall  f1-score   support
+|               | Precision | Recall | F1-Score | Support |
+|---------------|-----------|--------|----------|---------|
+| 1.0           | 0.12      | 0.03   | 0.05     | 574     |
+| 2.0           | 0.08      | 0.01   | 0.02     | 474     |
+| 3.0           | 0.08      | 0.01   | 0.02     | 1434    |
+| 4.0           | 0.29      | 0.07   | 0.11     | 7461    |
+| 5.0           | 0.78      | 0.96   | 0.86     | 33936   |
+| Accuracy      |           |        | 0.75     | 43879   |
+| Macro Avg     | 0.27      | 0.22   | 0.21     | 43879   |
+| Weighted Avg  | 0.66      | 0.75   | 0.69     | 43879   |
 
-         1.0       0.12      0.03      0.05       574
-         2.0       0.08      0.01      0.02       474
-         3.0       0.08      0.01      0.02      1434
-         4.0       0.29      0.07      0.11      7461
-         5.0       0.78      0.96      0.86     33936
+| Feature             | Importance |
+|---------------------|------------|
+| minutes             | 0.074      |
+| n_steps             | 0.062      |
+| n_ingredients       | 0.053      |
+| user_id             | 0.363      |
+| calories (#)        | 0.072      |
+| total fat (PDV)     | 0.054      |
+| sugar (PDV)         | 0.075      |
+| sodium (PDV)        | 0.073      |
+| protein (PDV)       | 0.073      |
+| saturated fat (PDV) | 0.058      |
+| carbohydrates (PDV) | 0.044      |
 
-    accuracy                           0.75     43879
-   macro avg       0.27      0.22      0.21     43879
-weighted avg       0.66      0.75      0.69     43879
-
-
-Feature Importances:
-minutes: 0.074
-n_steps: 0.062
-n_ingredients: 0.053
-user_id: 0.363
-calories (#): 0.072
-total fat (PDV): 0.054
-sugar (PDV): 0.075
-sodium (PDV): 0.073
-protein (PDV): 0.073
-saturated fat (PDV): 0.058
-carbohydrates (PDV): 0.044
