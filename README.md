@@ -35,7 +35,7 @@ The second dataset, interactions, contains 731927 rows where each row is a revie
 | `'rating'`    | Rating given        |
 | `'review'`    | Review text         |
 
-**Cleaned Data Frame**
+**Cleaned Data Frame**  
 | name                                 |     id |   minutes | submitted   |   rating |   avg_rating_per_recipe |   calories (#) |   total fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated fat (PDV) |   carbohydrates (PDV) | calorie_range   |
 |:-------------------------------------|-------:|----------:|:------------|---------:|------------------------:|---------------:|------------------:|--------------:|---------------:|----------------:|----------------------:|----------------------:|:----------------|
 | 1 brownies in the world    best ever | 333281 |        40 | 2008-10-27  |        4 |                       4 |          138.4 |                10 |            50 |              3 |               3 |                    19 |                     6 | very_low        |
@@ -44,7 +44,7 @@ The second dataset, interactions, contains 731927 rows where each row is a revie
 | 412 broccoli casserole               | 306168 |        40 | 2008-05-30  |        5 |                       5 |          194.8 |                20 |             6 |             32 |              22 |                    36 |                     3 | low             |
 | 412 broccoli casserole               | 306168 |        40 | 2008-05-30  |        5 |                       5 |          194.8 |                20 |             6 |             32 |              22 |                    36 |                     3 | low             |
 
-**Interesting Aggregate**
+**Interesting Aggregate**  
 |   rating |   calories (#) |   total fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated fat (PDV) |   carbohydrates (PDV) |
 |---------:|---------------:|------------------:|--------------:|---------------:|----------------:|----------------------:|----------------------:|
 |        1 |        486.595 |           37.0564 |       88.0094 |        44.3564 |         34.0589 |               46.6791 |               16.3962 |
