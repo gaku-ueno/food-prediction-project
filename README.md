@@ -484,9 +484,9 @@ Our average precision and recall are:
 
 | 🧩 Feature          | 🔑 Importance |
 |---------------------|--------------|
-| user_id            | 0.363        |
-| sugar (PDV)        | 0.075        |
-| sodium (PDV)       | 0.073        |
+| minutes             | 0.104        |
+| n_steps             | 0.097        |
+| n_ingredients       | 0.065        |
 
 ---
 
