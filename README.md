@@ -493,3 +493,56 @@ Our average precision and recall are:
 ### 📌 Conclusion
 
 The final model improved the F1 score slightly from **0.680** to **0.686**. However, we likely did not achieve the improvements we were hoping for simply because of how skewed the dataset is for **5-star ratings**. This is also reflected in our F1 score per rating, as the F1 score for **5-star ratings** was the only one that increased significantly from our baseline model.
+
+## 🎯 Fairness Analysis
+
+### **Groups**
+- **Group 1:** Low-calorie recipes (`calorie_range == 'low'`)
+- **Group 2:** High-calorie recipes (`calorie_range == 'high'`)
+
+We chose these groups because calorie content is the most important feature, and we want to evaluate whether the model performs differently for recipes with lower calories compared to those with higher calories.
+
+---
+
+### **Evaluation Metric**
+The evaluation metric for this fairness analysis is the **F1-score**. This metric balances precision and recall, making it appropriate for imbalanced datasets like ours.
+
+---
+
+### **Hypotheses**
+- **Null Hypothesis (H₀):** The model is fair. Its F1-scores for predicting ratings of low-calorie recipes and high-calorie recipes are the same, and any differences are due to random chance.
+- **Alternate Hypothesis (H₁):** The model is not fair. Its F1-scores for predicting ratings of low-calorie recipes are different from those of high-calorie recipes.
+
+---
+
+### **Test Statistic**
+The test statistic is the difference in weighted F1-scores:
+$$
+\text{Test Statistic} = \text{F1}_{\text{high-calorie}} - \text{F1}_{\text{low-calorie}}
+$$
+
+---
+
+### **Significance Level**
+The significance level for this test is:
+$$
+\alpha = 0.05
+$$
+
+---
+
+### **Results**
+In our test set, we observe:
+- **Observed Test Statistic:** `-0.0144`
+    - This negative value indicates that the model performs slightly better on low-calorie recipes compared to high-calorie recipes.
+- **P-value:** `0.01`
+
+After running 1,000 simulations under the null hypothesis, we observe a p-value of `0.01`
+
+---
+
+### **Conclusion**
+Since the p-value of (`0.01`) is less than our significance level (`α = 0.05`), we can safely reject the null hypothesis.
+
+This means that our model is likely unfair and is most likely due to the lack of variance in low calorie recipes. 
+
