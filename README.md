@@ -516,18 +516,14 @@ The evaluation metric for this fairness analysis is the **F1-score**. This metri
 ---
 
 ### **Test Statistic**
-The test statistic is the difference in weighted F1-scores:
-$$
-\text{Test Statistic} = \text{F1}_{\text{high-calorie}} - \text{F1}_{\text{low-calorie}}
-$$
+The test statistic is the difference in weighted F1-scores:  
+$$\text{Test Statistic} = \text{F1}_{\text{high-calorie}} - \text{F1}_{\text{low-calorie}}$$
 
 ---
 
 ### **Significance Level**
 The significance level for this test is:
-$$
-\alpha = 0.05
-$$
+$$\alpha = 0.05$$
 
 ---
 
