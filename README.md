@@ -301,7 +301,7 @@ Our baseline model will use the features **calories** (quantitative continuous) 
 
 ### ⚙️ Handling Missing Values  
 
-To start, we will handle these missing values by imputing them with their respective medians, as  
+To start, we will handle these missing values by dropping the rows with nan values. This is to make sure not to introduce bias into the dataset.  
 
 ---  
 
