@@ -1,4 +1,4 @@
-# Analysis of Food.com recipe features and their ratings
+# Analysis of Food.com Recipes and Ratings
 
 Authors: Gaku Ueno & Neil Dewan
 
@@ -239,8 +239,6 @@ Results
 Conclusion  
 - Since the p-value ($0.0$) is much smaller than our significance level ($\alpha = 0.05$), we reject the null hypothesis. This means there is statistical evidence to suggest that high-calorie recipes receive lower ratings than low-calorie recipes.  
 
-While there may appear to be a slight trend in the scatter plot, our statistical test confirms that this trend is likely due to random variation rather than a meaningful relationship between calorie content and recipe ratings.  
-
 It could be the case that high calorie recipes are rated lower than low calorie recipes because people that cook their own food are usually very health conscious, which means that they want to lower their calorie intake and rate recipes that are high in calories lower than recipes that are lower in calorie.  
 
 ## Framing a prediction problem   
@@ -387,32 +385,35 @@ To improve our model in subsequent analyses, we decided to:
 - ✅ Tuning hyperparameters  by incorporating more features and using **GridSearchCV** to find the optimal hyperparameters.
 
 ### Final Model Classification Report  
-Test Weighted F1-score: 0.686  
+Test Weighted F1-score: 0.683  
+
+### Classification Report
 
 |               | Precision | Recall | F1-Score | Support |
 |---------------|-----------|--------|----------|---------|
-| 1.0           | 0.12      | 0.03   | 0.05     | 574     |
-| 2.0           | 0.08      | 0.01   | 0.02     | 474     |
-| 3.0           | 0.08      | 0.01   | 0.02     | 1434    |
-| 4.0           | 0.29      | 0.07   | 0.11     | 7461    |
-| 5.0           | 0.78      | 0.96   | 0.86     | 33936   |
-| Accuracy      |           |        | 0.75     | 43879   |
-| Macro Avg     | 0.27      | 0.22   | 0.21     | 43879   |
-| Weighted Avg  | 0.66      | 0.75   | 0.69     | 43879   |
+| **1.0**     | 0.13      | 0.02   | 0.04     | 574     |
+| **2.0**     | 0.04      | 0.00   | 0.01     | 474     |
+| **3.0**     | 0.05      | 0.01   | 0.01     | 1434    |
+| **4.0**     | 0.26      | 0.05   | 0.09     | 7461    |
+| **5.0**     | 0.78      | 0.97   | 0.86     | 33936   |
+| **Accuracy**|           |        | 0.76     | 43879   |
+| **Macro Avg**| 0.25     | 0.21   | 0.20     | 43879   |
+| **Weighted Avg** | 0.65 | 0.76   | 0.68     | 43879   |
+
+### Feature Importances
 
 | Feature             | Importance |
 |---------------------|------------|
-| minutes             | 0.074      |
-| n_steps             | 0.062      |
-| n_ingredients       | 0.053      |
-| user_id             | 0.363      |
-| calories (#)        | 0.072      |
-| total fat (PDV)     | 0.054      |
-| sugar (PDV)         | 0.075      |
-| sodium (PDV)        | 0.073      |
-| protein (PDV)       | 0.073      |
-| saturated fat (PDV) | 0.058      |
-| carbohydrates (PDV) | 0.044      |
+| minutes             | 0.104      |
+| n_steps             | 0.097      |
+| n_ingredients       | 0.065      |
+| calories (#)        | 0.156      |
+| total fat (PDV)     | 0.087      |
+| sugar (PDV)         | 0.118      |
+| sodium (PDV)        | 0.104      |
+| protein (PDV)       | 0.105      |
+| saturated fat (PDV) | 0.099      |
+| carbohydrates (PDV) | 0.067      |
 
 ## 🎯 Final Model 
 
